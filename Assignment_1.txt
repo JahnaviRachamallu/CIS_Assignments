@@ -1,0 +1,8 @@
+a=["jahnavi","gagan"]
+b=["mandakapu","rachamallu"]
+if len(a)==len(b):
+    for i in range (len(a)):
+        c=a[i] + "," + b[i]
+        print(c)
+else:
+    print("ERROR")

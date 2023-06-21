@@ -1,0 +1,5 @@
+select p.prod_id, p.prod_price, p.start_date,
+       if(n.start_date is not null, date_sub(n.start_date, interval 1 day ),p.end_date)
+       as end_date from products p 
+       left join newprod n on p.prod_id = n.prod_id
+union select * from newprod;
